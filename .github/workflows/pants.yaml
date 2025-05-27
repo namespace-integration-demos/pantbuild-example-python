@@ -43,7 +43,7 @@ jobs:
 
     - name: Limit LMDB memory usage 
       if: runner.arch == 'ARM64'
-      run: echo "PANTS_LOCAL_STORE_PROCESSES_MAX_SIZE_BYTES=536870912" >> $GITHUB_ENV
+      run: echo "PANTS_LOCAL_STORE_PROCESSES_MAX_SIZE_BYTES=1073741824" >> $GITHUB_ENV
 
     - uses: pantsbuild/actions/init-pants@v8
       if: matrix.setup == 'init-pants-action'
